@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Futuristic AI & Cloud Services Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cyber Background Colors */
+    --background: 220 25% 6%;
+    --foreground: 210 100% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass-morphism Cards */
+    --card: 220 20% 8%;
+    --card-foreground: 210 95% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover Elements */
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 95% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon Primary Colors */
+    --primary: 195 100% 60%;
+    --primary-foreground: 220 25% 6%;
+    --primary-glow: 195 100% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Electric Secondary */
+    --secondary: 285 100% 65%;
+    --secondary-foreground: 210 95% 95%;
+    --secondary-glow: 285 100% 80%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Subtle Surfaces */
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 20% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Highlights */
+    --accent: 45 100% 60%;
+    --accent-foreground: 220 25% 6%;
+    --accent-glow: 45 100% 75%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Danger States */
+    --destructive: 0 85% 65%;
+    --destructive-foreground: 210 95% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Interface Elements */
+    --border: 220 15% 20%;
+    --input: 220 15% 12%;
+    --ring: 195 100% 60%;
 
-    --radius: 0.5rem;
+    /* Gradient Definitions */
+    --gradient-cyber: linear-gradient(135deg, hsl(195 100% 60%) 0%, hsl(285 100% 65%) 100%);
+    --gradient-neural: linear-gradient(45deg, hsl(195 100% 60%) 0%, hsl(45 100% 60%) 50%, hsl(285 100% 65%) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(220 20% 8% / 0.8) 0%, hsl(220 15% 12% / 0.6) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(195 100% 60% / 0.3) 0%, transparent 70%);
+
+    /* Shadows & Glows */
+    --shadow-cyber: 0 0 20px hsl(195 100% 60% / 0.3), 0 0 40px hsl(195 100% 60% / 0.1);
+    --shadow-neural: 0 0 30px hsl(285 100% 65% / 0.4), 0 0 60px hsl(285 100% 65% / 0.2);
+    --shadow-glass: 0 8px 32px hsl(220 25% 6% / 0.4), inset 0 1px 0 hsl(210 100% 98% / 0.1);
+
+    /* Animation Speeds */
+    --transition-fast: 0.15s ease-out;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +127,101 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-glow), var(--background);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glass Morphism Effects */
+  .glass-card {
+    @apply backdrop-blur-xl border border-border/20;
+    background: var(--gradient-surface);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .cyber-glow {
+    @apply relative;
+    box-shadow: var(--shadow-cyber);
+  }
+
+  .cyber-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none rounded-lg;
+    background: var(--gradient-glow);
+    z-index: -1;
+  }
+
+  .cyber-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Neural Network Animation */
+  .neural-pulse {
+    animation: neural-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes neural-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(195 100% 60% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(195 100% 60% / 0.8), 0 0 80px hsl(285 100% 65% / 0.4);
+    }
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Matrix-style Text Animation */
+  .matrix-text {
+    @apply relative overflow-hidden;
+  }
+
+  .matrix-text::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent;
+    transform: translateX(-100%);
+    animation: matrix-scan 2s linear infinite;
+  }
+
+  @keyframes matrix-scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Holographic Border Effect */
+  .holo-border {
+    @apply relative;
+    background: linear-gradient(45deg, transparent 30%, hsl(195 100% 60% / 0.1) 50%, transparent 70%);
+    background-size: 200% 200%;
+    animation: holo-shift 3s ease-in-out infinite;
+  }
+
+  @keyframes holo-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Circuit Pattern */
+  .circuit-bg {
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsl(195 100% 60% / 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 40% 20%, hsl(285 100% 65% / 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, hsl(45 100% 60% / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px, 70px 70px;
+    animation: circuit-flow 10s linear infinite;
+  }
+
+  @keyframes circuit-flow {
+    0% { background-position: 0% 0%, 0% 0%, 0% 0%; }
+    100% { background-position: 100% 100%, -100% 100%, 50% -50%; }
   }
 }
