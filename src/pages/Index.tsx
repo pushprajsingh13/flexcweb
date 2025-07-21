@@ -1,5 +1,8 @@
 import { HeroSection } from "@/components/HeroSection";
 import { ServicesGrid } from "@/components/ServicesGrid";
+import { DigitalOfferingsSection } from "@/components/DigitalOfferingsSection";
+import { WhyChooseSection } from "@/components/WhyChooseSection";
+import { AIToolsSection } from "@/components/AIToolsSection";
 import { TechStats } from "@/components/TechStats";
 import { ProcessSection } from "@/components/ProcessSection";
 import { CTASection } from "@/components/CTASection";
@@ -9,6 +12,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <HeroSection />
       <ServicesGrid />
+      <DigitalOfferingsSection />
+      <WhyChooseSection />
+      <AIToolsSection />
       <TechStats />
       <ProcessSection />
       <CTASection />
