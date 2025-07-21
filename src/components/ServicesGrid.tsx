@@ -175,75 +175,66 @@ export const ServicesGrid = () => {
           </p>
         </div>
 
-        <div className="space-y-24">
-          {services.map((category, categoryIndex) => (
-            <div key={category.category} className="space-y-8">
-              {/* Category Header */}
-              <div className="flex items-center gap-6">
-                <div className="glass-card p-6 rounded-2xl cyber-glow">
-                  <img 
-                    src={category.image} 
-                    alt={category.category}
-                    className="w-24 h-24 rounded-xl object-cover"
-                  />
-                </div>
-                <div>
+        {/* All Services in Single Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {services.map((category) => 
+            category.services.map((service, serviceIndex) => (
+              <Card key={`${category.category}-${service.title}`} className="glass-card hover:cyber-glow transition-all duration-300 group">
+                <CardHeader className="space-y-4">
                   <div className="flex items-center gap-3 mb-2">
-                    <category.icon className={`w-8 h-8 text-${category.color}`} />
-                    <h3 className="text-3xl font-bold text-foreground">{category.category}</h3>
+                    <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20">
+                      <category.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <Badge variant="outline" className="text-xs">
+                      {category.category}
+                    </Badge>
                   </div>
-                  <p className="text-muted-foreground">
-                    Advanced solutions powered by next-generation technology
-                  </p>
-                </div>
-              </div>
-
-              {/* Services Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.services.map((service, serviceIndex) => (
-                  <Card key={service.title} className="glass-card hover:cyber-glow transition-all duration-300 group">
-                    <CardHeader className="space-y-4">
-                      <div className="flex items-start justify-between">
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                          {service.title}
-                        </CardTitle>
-                        <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                      </div>
-                      <CardDescription className="text-muted-foreground">
-                        {service.description}
-                      </CardDescription>
-                    </CardHeader>
-                    
-                    <CardContent className="space-y-6">
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-semibold text-foreground">Key Features:</h4>
-                        <div className="grid grid-cols-2 gap-2">
-                          {service.features.map((feature) => (
-                            <Badge 
-                              key={feature} 
-                              variant="outline" 
-                              className="text-xs border-border/30 hover:border-primary/50 transition-colors"
-                            >
-                              {feature}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="pt-4 border-t border-border/20">
-                        <div className="flex items-center justify-between">
-                          <span className="text-lg font-bold text-primary">{service.price}</span>
-                          <Button size="sm" className="neural-pulse">
-                            Get Quote
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          ))}
+                  
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
+                  
+                  <CardDescription className="text-muted-foreground">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                
+                <CardContent className="space-y-6">
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-foreground">Key Features:</h4>
+                    <div className="grid grid-cols-1 gap-2">
+                      {service.features.slice(0, 3).map((feature) => (
+                        <Badge 
+                          key={feature} 
+                          variant="outline" 
+                          className="text-xs border-border/30 hover:border-primary/50 transition-colors justify-start"
+                        >
+                          {feature}
+                        </Badge>
+                      ))}
+                      {service.features.length > 3 && (
+                        <Badge variant="outline" className="text-xs opacity-50">
+                          +{service.features.length - 3} more
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-border/20">
+                    <div className="flex items-center justify-between">
+                      <span className="text-lg font-bold text-primary">{service.price}</span>
+                      <Button size="sm" className="neural-pulse">
+                        Get Quote
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))
+          )}
         </div>
       </div>
     </section>
