@@ -2,60 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Futuristic AI & Cloud Services Design System - All colors MUST be HSL */
+/* Professional AI & Cloud Services Design System - Light Theme */
 
 @layer base {
   :root {
-    /* Cyber Background Colors */
-    --background: 220 25% 6%;
-    --foreground: 210 100% 98%;
+    /* Clean Light Background Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 13%;
 
-    /* Glass-morphism Cards */
-    --card: 220 20% 8%;
-    --card-foreground: 210 95% 95%;
+    /* Clean Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 13%;
 
     /* Popover Elements */
-    --popover: 220 25% 10%;
-    --popover-foreground: 210 95% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 13%;
 
-    /* Neon Primary Colors */
-    --primary: 195 100% 60%;
-    --primary-foreground: 220 25% 6%;
-    --primary-glow: 195 100% 75%;
+    /* Professional Primary Colors - Blue */
+    --primary: 213 94% 68%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 213 94% 80%;
 
-    /* Electric Secondary */
-    --secondary: 285 100% 65%;
-    --secondary-foreground: 210 95% 95%;
-    --secondary-glow: 285 100% 80%;
+    /* Orange Secondary */
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 25 95% 65%;
 
     /* Subtle Surfaces */
-    --muted: 220 15% 15%;
-    --muted-foreground: 210 20% 70%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
 
-    /* Accent Highlights */
-    --accent: 45 100% 60%;
-    --accent-foreground: 220 25% 6%;
-    --accent-glow: 45 100% 75%;
+    /* Accent Highlights - Orange */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 25 95% 65%;
 
     /* Danger States */
-    --destructive: 0 85% 65%;
-    --destructive-foreground: 210 95% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Interface Elements */
-    --border: 220 15% 20%;
-    --input: 220 15% 12%;
-    --ring: 195 100% 60%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 94% 68%;
 
     /* Gradient Definitions */
-    --gradient-cyber: linear-gradient(135deg, hsl(195 100% 60%) 0%, hsl(285 100% 65%) 100%);
-    --gradient-neural: linear-gradient(45deg, hsl(195 100% 60%) 0%, hsl(45 100% 60%) 50%, hsl(285 100% 65%) 100%);
-    --gradient-surface: linear-gradient(135deg, hsl(220 20% 8% / 0.8) 0%, hsl(220 15% 12% / 0.6) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(195 100% 60% / 0.3) 0%, transparent 70%);
+    --gradient-professional: linear-gradient(135deg, hsl(213 94% 68%) 0%, hsl(25 95% 53%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(220 14% 96% / 0.8) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(213 94% 68% / 0.1) 0%, transparent 70%);
 
-    /* Shadows & Glows */
-    --shadow-cyber: 0 0 20px hsl(195 100% 60% / 0.3), 0 0 40px hsl(195 100% 60% / 0.1);
-    --shadow-neural: 0 0 30px hsl(285 100% 65% / 0.4), 0 0 60px hsl(285 100% 65% / 0.2);
-    --shadow-glass: 0 8px 32px hsl(220 25% 6% / 0.4), inset 0 1px 0 hsl(210 100% 98% / 0.1);
+    /* Shadows & Professional Effects */
+    --shadow-professional: 0 1px 3px hsl(220 13% 13% / 0.1), 0 1px 2px hsl(220 13% 13% / 0.06);
+    --shadow-elevated: 0 4px 6px hsl(220 13% 13% / 0.07), 0 2px 4px hsl(220 13% 13% / 0.06);
+    --shadow-glass: 0 8px 32px hsl(220 13% 13% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.1);
 
     /* Animation Speeds */
     --transition-fast: 0.15s ease-out;
