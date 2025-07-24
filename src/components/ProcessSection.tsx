@@ -87,7 +87,7 @@ const processSteps = [
 
 export const ProcessSection = () => {
   return (
-    <section className="py-24 relative">
+    <section id="process" className="py-24 relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 circuit-bg opacity-10"></div>
       

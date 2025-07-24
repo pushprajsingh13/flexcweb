@@ -67,7 +67,7 @@ const aiTools = [
 
 export const AIToolsSection = () => {
   return (
-    <section className="py-24 relative">
+    <section id="ai-tools" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-2 mb-4">
@@ -86,12 +86,10 @@ export const AIToolsSection = () => {
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           {aiTools.map((tool, index) => (
-            <Card key={index} className={`group hover:shadow-elevated transition-all duration-300 overflow-hidden ${
-              index % 2 === 0 ? '' : 'lg:flex-row-reverse'
-            }`}>
-              <div className="lg:flex">
+            <Card key={index} className="group hover:shadow-elevated transition-all duration-300 overflow-hidden">
+              <div className={`lg:flex items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 {/* Content Side */}
                 <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                   <div className="space-y-6">
@@ -141,7 +139,7 @@ export const AIToolsSection = () => {
                   <img 
                     src={tool.image}
                     alt={tool.title}
-                    className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-500 rounded-lg lg:rounded-none"
                   />
                   <div className="absolute top-6 right-6 z-20">
                     <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>

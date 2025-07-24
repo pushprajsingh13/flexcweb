@@ -50,7 +50,7 @@ const reasons = [
 
 export const WhyChooseSection = () => {
   return (
-    <section className="py-24 relative bg-gradient-subtle">
+    <section id="why-choose" className="py-24 relative bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-2 mb-4">

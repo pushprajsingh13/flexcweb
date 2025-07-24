@@ -15,7 +15,7 @@ import {
 
 export const CTASection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-24 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full circuit-bg opacity-20"></div>

@@ -39,7 +39,7 @@ const stats = [
 
 export const TechStats = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="tech-stats" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-1/4 w-72 h-72 rounded-full bg-primary/10 blur-3xl"></div>

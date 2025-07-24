@@ -5,7 +5,7 @@ import heroImage from "@/assets/ai-neural-hero.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg pt-16">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-pulse"></div>

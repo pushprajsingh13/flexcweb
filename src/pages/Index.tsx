@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ServicesGrid } from "@/components/ServicesGrid";
 import { DigitalOfferingsSection } from "@/components/DigitalOfferingsSection";
@@ -10,6 +11,7 @@ import { CTASection } from "@/components/CTASection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <HeroSection />
       <ServicesGrid />
       <DigitalOfferingsSection />

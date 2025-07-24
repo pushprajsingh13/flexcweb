@@ -42,7 +42,7 @@ const benefits = [
 
 export const DigitalOfferingsSection = () => {
   return (
-    <section className="py-24 relative bg-gradient-to-r from-secondary to-accent">
+    <section id="digital-offerings" className="py-24 relative bg-gradient-to-r from-secondary to-accent">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}

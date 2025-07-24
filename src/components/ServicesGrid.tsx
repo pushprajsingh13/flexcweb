@@ -155,7 +155,7 @@ const services = [
 
 export const ServicesGrid = () => {
   return (
-    <section className="py-24 relative">
+    <section id="services" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge className="cyber-glow bg-primary/20 text-primary border-primary/30 px-4 py-2 mb-4">
