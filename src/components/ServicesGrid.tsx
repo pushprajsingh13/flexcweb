@@ -28,129 +28,27 @@ const services = [
     image: mlAlgorithms,
     services: [
       {
-        title: "Machine Learning Solutions",
-        description: "Custom ML models for predictive analytics, pattern recognition, and intelligent automation",
+        title: "AI Solutions",
+        description: "Harness the power of advanced AI platforms — including LLMs and agentic models — to automate processes, create intelligent conversational interfaces, and drive business insights.",
         features: ["Deep Learning", "Neural Networks", "Computer Vision", "NLP Processing"],
-        price: "From $5,000/month"
       },
       {
-        title: "AI Chatbots & Assistants",
-        description: "Intelligent conversational AI powered by advanced language models",
+        title: "Data Engineering & Analytics",
+        description: "Build robust, scalable data architectures and pipelines. Our analytics solutions enable better decisions through real-time insights and powerful data visualizations.",
         features: ["24/7 Support", "Multi-language", "Context Aware", "Custom Training"],
-        price: "From $2,500/month"
       },
       {
-        title: "Predictive Analytics",
-        description: "Advanced forecasting and trend analysis using AI algorithms",
+        title: "Enterprise Platform Implementation",
+        description: "Accelerate digital transformation through implementation of enterprise-grade platforms like",
+        features: ["Salesforce", "E42.ai", "Nvidia Omniverse", "Robotic Process Automation (RPA)","DigiUsher (Cloud & AI FinOps)"],
+      },
+      {
+        title: "Full Stack Web & App Development",
+        description: "We develop responsive, modern web and mobile applications using today’s leading frameworks — ensuring performance, usability, and scalability.",
         features: ["Real-time Data", "Custom Dashboards", "Risk Assessment", "Performance Metrics"],
-        price: "From $3,500/month"
       }
     ]
   },
-  {
-    category: "Cloud Computing",
-    icon: Cloud,
-    color: "secondary",
-    image: cloudDatacenter,
-    services: [
-      {
-        title: "Cloud Migration Services",
-        description: "Seamless migration of your infrastructure to cloud platforms",
-        features: ["AWS", "Azure", "Google Cloud", "Multi-cloud Strategy"],
-        price: "From $10,000/project"
-      },
-      {
-        title: "Serverless Architecture",
-        description: "Build scalable applications with serverless computing",
-        features: ["Auto-scaling", "Pay-per-use", "High Availability", "Microservices"],
-        price: "From $4,000/month"
-      },
-      {
-        title: "Cloud Security",
-        description: "Comprehensive security solutions for cloud environments",
-        features: ["Identity Management", "Data Encryption", "Compliance", "Monitoring"],
-        price: "From $6,000/month"
-      }
-    ]
-  },
-  {
-    category: "Cybersecurity",
-    icon: Shield,
-    color: "accent",
-    image: cybersecurity,
-    services: [
-      {
-        title: "AI-Powered Threat Detection",
-        description: "Advanced threat detection using machine learning algorithms",
-        features: ["Real-time Monitoring", "Behavioral Analysis", "Automated Response", "Threat Intelligence"],
-        price: "From $8,000/month"
-      },
-      {
-        title: "Zero Trust Architecture",
-        description: "Implement comprehensive zero trust security framework",
-        features: ["Identity Verification", "Device Security", "Network Segmentation", "Continuous Monitoring"],
-        price: "From $12,000/project"
-      },
-      {
-        title: "Compliance & Auditing",
-        description: "Ensure regulatory compliance with automated auditing",
-        features: ["GDPR", "HIPAA", "SOC 2", "Automated Reports"],
-        price: "From $5,000/month"
-      }
-    ]
-  },
-  {
-    category: "Process Automation",
-    icon: Cog,
-    color: "primary",
-    image: automation,
-    services: [
-      {
-        title: "Robotic Process Automation",
-        description: "Automate repetitive tasks with intelligent bots",
-        features: ["Workflow Automation", "Document Processing", "Data Entry", "Task Scheduling"],
-        price: "From $3,000/month"
-      },
-      {
-        title: "AI-Driven Analytics",
-        description: "Automated data analysis and insight generation",
-        features: ["Data Mining", "Pattern Recognition", "Automated Reporting", "Business Intelligence"],
-        price: "From $4,500/month"
-      },
-      {
-        title: "DevOps Automation",
-        description: "Streamline development and deployment processes",
-        features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring", "Auto-scaling"],
-        price: "From $6,500/month"
-      }
-    ]
-  },
-  {
-    category: "Blockchain & Web3",
-    icon: Link,
-    color: "secondary",
-    image: blockchain,
-    services: [
-      {
-        title: "Smart Contract Development",
-        description: "Custom smart contracts for decentralized applications",
-        features: ["Ethereum", "Polygon", "Solana", "Security Audits"],
-        price: "From $15,000/project"
-      },
-      {
-        title: "DeFi Solutions",
-        description: "Decentralized finance platforms and protocols",
-        features: ["Lending Protocols", "DEX Development", "Yield Farming", "Tokenization"],
-        price: "From $25,000/project"
-      },
-      {
-        title: "NFT Marketplaces",
-        description: "End-to-end NFT marketplace development",
-        features: ["Minting Platform", "Trading Features", "Royalty System", "Multi-chain Support"],
-        price: "From $20,000/project"
-      }
-    ]
-  }
 ];
 
 export const ServicesGrid = () => {
@@ -167,11 +65,10 @@ export const ServicesGrid = () => {
               Cutting-Edge
             </span>
             <br />
-            Technology Solutions
+            IT Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI and cloud services designed to transform 
-            your business operations and drive unprecedented growth.
+            At FlexC, every engagement is driven by a product-centric approach. Our teams engineer scalable, high-impact solutions — from strategy to execution — ensuring value creation, agility, and long-term performance.
           </p>
         </div>
 
@@ -206,7 +103,7 @@ export const ServicesGrid = () => {
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-foreground">Key Features:</h4>
                     <div className="grid grid-cols-1 gap-2">
-                      {service.features.slice(0, 3).map((feature) => (
+                      {service.features.slice(0, 5).map((feature) => (
                         <Badge 
                           key={feature} 
                           variant="outline" 
@@ -215,22 +112,14 @@ export const ServicesGrid = () => {
                           {feature}
                         </Badge>
                       ))}
-                      {service.features.length > 3 && (
+                      {/*{service.features.length > 3 && (
                         <Badge variant="outline" className="text-xs opacity-50">
                           +{service.features.length - 3} more
                         </Badge>
-                      )}
+                      )}*/}
                     </div>
                   </div>
-                  
-                  <div className="pt-4 border-t border-border/20">
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-primary">{service.price}</span>
-                      <Button size="sm" className="neural-pulse">
-                        Get Quote
-                      </Button>
-                    </div>
-                  </div>
+
                 </CardContent>
               </Card>
             ))

@@ -36,8 +36,8 @@ export const CTASection = () => {
             <span className="text-foreground">with AI Excellence</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to revolutionize your operations? Let's discuss how our AI solutions 
-            can accelerate your digital transformation journey.
+            Looking to build, scale, or optimize your tech stack?
+            Partner with FlexC — your trusted ally in engineering innovation.
           </p>
         </div>
 

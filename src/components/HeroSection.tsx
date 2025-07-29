@@ -25,16 +25,15 @@ export const HeroSection = () => {
               
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="matrix-text bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-                  AI Powered
+                  Engineering the Future of Work
                 </span>
                 <br />
-                <span className="text-foreground">IT Services</span>
+                <span className="text-foreground">Through Technology</span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Revolutionize your business with cutting-edge artificial intelligence, 
-                cloud computing, and advanced automation solutions that drive innovation 
-                and accelerate digital transformation.
+                Product-led IT Services | Cloud FinOps | AI Solutions | Platform Expertise
+                Empowering businesses with cutting-edge technology services driven by a product mindset and deep engineering expertise.
               </p>
             </div>
 
@@ -46,23 +45,23 @@ export const HeroSection = () => {
               
               <Button size="lg" variant="outline" className="holo-border border-primary/30 hover:bg-primary/10">
                 <Cloud className="w-5 h-5 mr-2" />
-                Cloud Solutions
+                  Contact Us
               </Button>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">AI Models Deployed</div>
+                <div className="text-3xl font-bold text-primary">5+</div>
+                <div className="text-sm text-muted-foreground">Industry Domains</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-secondary">99.9%</div>
-                <div className="text-sm text-muted-foreground">Cloud Uptime</div>
+                <div className="text-3xl font-bold text-secondary">50+</div>
+                <div className="text-sm text-muted-foreground">Satisfied Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">24/7</div>
-                <div className="text-sm text-muted-foreground">AI Monitoring</div>
+                <div className="text-3xl font-bold text-accent">100+</div>
+                <div className="text-sm text-muted-foreground">AI Model Deployed</div>
               </div>
             </div>
           </div>

@@ -12,8 +12,8 @@ import {
 const reasons = [
   {
     icon: Zap,
-    title: "Lightning Fast Implementation",
-    description: "Get your AI solutions deployed in weeks, not months, with our streamlined processes.",
+    title: "Cost Visibility",
+    description: "Analyze and reduce cloud costs.",
     color: "primary"
   },
   {
@@ -24,26 +24,26 @@ const reasons = [
   },
   {
     icon: Globe,
-    title: "Global Scalability",
-    description: "Solutions that scale seamlessly across regions and handle millions of operations.",
+    title: "Cloud Optimization",
+    description: "Optimize cloud architecture.",
     color: "accent"
   },
   {
     icon: Lightbulb,
-    title: "Innovation First",
-    description: "Cutting-edge research and development keeping you ahead of the competition.",
+    title: "Proven ROI",
+    description: "Maximize ROI on AI/ML workloads.",
     color: "primary"
   },
   {
     icon: TrendingUp,
-    title: "Proven ROI",
-    description: "Average 300% ROI within the first year of AI implementation for our clients.",
+    title: "Business Alignment",
+    description: "Drive governance and efficiency across multicloud setups.",
     color: "secondary"
   },
   {
     icon: Heart,
-    title: "24/7 Support",
-    description: "Round-the-clock technical support and maintenance for uninterrupted operations.",
+    title: "Lightning Fast Implementation",
+    description: "Get your FinOps AI solutions deployed in weeks, not months, with our streamlined processes.",
     color: "accent"
   }
 ];
@@ -61,11 +61,10 @@ export const WhyChooseSection = () => {
               Why Flex
             </span>
             <br />
-            <span className="text-foreground">With Our Platform</span>
+            <span className="text-foreground">Strategic Partnership: DigiUsher + FlexC Cloud and AI FinOps Reimagined</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Experience the difference with our innovative approach to AI and cloud solutions. 
-            We deliver exceptional results that drive your business forward.
+            As an implementation and reseller partner of DigiUsher, FlexC delivers end-to-end FinOps solutions for cloud and AI workloads. Our joint offering helps enterprises:
           </p>
         </div>
 

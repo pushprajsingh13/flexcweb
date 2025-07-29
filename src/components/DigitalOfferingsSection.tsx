@@ -13,23 +13,23 @@ import {
 const offerings = [
   {
     icon: Target,
-    title: "Proven Track Record",
-    description: "Over 500 successful AI implementations with measurable ROI for our clients."
+    title: "Product DNA Approach",
+    description: "We engineer every solution like it’s our own product."
   },
   {
     icon: Users,
     title: "Expert Team",
-    description: "PhD-level AI researchers and experienced engineers working on your projects."
+    description: "AI researchers and experienced engineers working on your projects."
   },
   {
     icon: Clock,
-    title: "Rapid Deployment",
-    description: "Fast implementation with our proven methodologies and pre-built frameworks."
+    title: "Proven Track Record",
+    description: "Trusted partner for clients across India, UK, and beyond."
   },
   {
     icon: Award,
-    title: "Industry Recognition",
-    description: "Award-winning solutions recognized by leading technology organizations."
+    title: "Rapid Deployment",
+    description: "Fast implementation with our proven methodologies and pre-built frameworks."
   }
 ];
 
@@ -59,8 +59,7 @@ export const DigitalOfferingsSection = () => {
               </h2>
               
               <p className="text-xl text-white/80 leading-relaxed">
-                We don't just deliver AI solutions – we partner with you to ensure long-term 
-                success and continuous innovation in your digital journey.
+                We don't just deliver solutions – we partner with you to ensure long-term success and continuous innovation in your digital journey.
               </p>
             </div>
             

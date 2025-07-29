@@ -18,7 +18,7 @@ const Index = () => {
       <WhyChooseSection />
       <AIToolsSection />
       <TechStats />
-      <ProcessSection />
+      {/*<ProcessSection />*/}
       <CTASection />
     </div>
   );

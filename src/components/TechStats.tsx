@@ -6,33 +6,49 @@ const stats = [
   {
     icon: TrendingUp,
     value: "500+",
-    label: "AI Models Deployed",
-    description: "Advanced machine learning models running in production",
+    label: "Global E-Commerce Platform",
+    description: "Cross-border logistics & compliance platform",
     progress: 95,
     color: "primary"
   },
   {
     icon: Users,
     value: "10K+",
-    label: "Clients Served",
-    description: "Businesses transformed with our AI solutions",
+    label: "Healthcare Consulting (UK)",
+    description: "Specialty medicine logistics platform",
     progress: 88,
     color: "secondary"
   },
   {
     icon: Clock,
     value: "99.9%",
-    label: "System Uptime",
-    description: "Reliable cloud infrastructure with minimal downtime",
+    label: "EV Manufacturer",
+    description: "Mobile & B2B platform for vehicle health & tracking",
     progress: 99,
     color: "accent"
   },
   {
     icon: Award,
     value: "24/7",
-    label: "AI Monitoring",
-    description: "Continuous monitoring and optimization of AI systems",
+    label: "Pickleball Sports League",
+    description: "Player draft management and analytics",
     progress: 100,
+    color: "primary"
+  },
+  {
+    icon: Users,
+    value: "10K+",
+    label: "Cloud FinOps",
+    description: "Cloud cost reduction by 75% via FinOps and re-architecture",
+    progress: 88,
+    color: "secondary"
+  },
+  {
+    icon: TrendingUp,
+    value: "500+",
+    label: "AI Talent Marketplace Platform",
+    description: "Cut down Talent Hiring cycle across contracting and full time hires",
+    progress: 95,
     color: "primary"
   }
 ];
@@ -60,8 +76,7 @@ export const TechStats = () => {
             <span className="text-foreground">Across Industries</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our cutting-edge AI and cloud solutions deliver measurable impact 
-            with industry-leading performance metrics and reliability.
+            Whether you're scaling AI infrastructure or optimizing legacy cloud spend — we bring the tools, expertise, and agility to transform your cloud economics.
           </p>
         </div>
 
