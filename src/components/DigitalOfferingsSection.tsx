@@ -72,6 +72,7 @@ export const DigitalOfferingsSection = () => {
               ))}
             </div>
             
+          <a href="https://www.flexc.work/contact-us" className="mt-6 inline-block" target="_blank" rel="noopener noreferrer">
             <Button 
               size="lg" 
               className="bg-white text-secondary hover:bg-white/90 group"
@@ -79,6 +80,7 @@ export const DigitalOfferingsSection = () => {
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
+          </a>
           </div>
           
           {/* Right Content - Cards Grid */}

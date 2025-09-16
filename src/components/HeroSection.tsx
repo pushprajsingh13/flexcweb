@@ -5,7 +5,7 @@ import heroImage from "@/assets/ai-neural-hero.jpg";
 
 export const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg pt-16">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg pt-16 mt-8">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-pulse"></div>
@@ -18,10 +18,10 @@ export const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <Badge className="cyber-glow bg-primary/20 text-primary border-primary/30 px-4 py-2">
+              {/* <Badge className="cyber-glow bg-primary/20 text-primary border-primary/30 px-4 py-2">
                 <Brain className="w-4 h-4 mr-2" />
                 Next-Gen AI Solutions
-              </Badge>
+              </Badge> */}
               
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="matrix-text bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
@@ -38,15 +38,20 @@ export const HeroSection = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="cyber-glow neural-pulse group bg-gradient-to-r from-primary to-primary-glow">
+              <a href="#services">
+                <Button size="lg" className="cyber-glow neural-pulse group bg-gradient-to-r from-primary to-primary-glow">
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              </Button >
+              </a>
               
-              <Button size="lg" variant="outline" className="holo-border border-primary/30 hover:bg-primary/10">
+            <a href="https://www.flexc.work/contact-us" target="_blank" rel="noopener noreferrer">
+               <Button size="lg" variant="outline" className="holo-border border-primary/30 hover:bg-primary/10">
                 <Cloud className="w-5 h-5 mr-2" />
                   Contact Us
               </Button>
+            </a>
+             
             </div>
 
             {/* Stats */}

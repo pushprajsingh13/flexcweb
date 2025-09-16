@@ -1,56 +1,44 @@
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { TrendingUp, Users, Clock, Award } from "lucide-react";
+import aeroEngg from "../assets/aeroEngg.png";
+import evMan from "../assets/evMan.png";
+import sports from "../assets/sports.png";
+import pharma from "../assets/pharma.png";
 
 const stats = [
   {
-    icon: TrendingUp,
+    image: aeroEngg,
     value: "500+",
-    label: "Global E-Commerce Platform",
-    description: "Cross-border logistics & compliance platform",
+    label: "Aero Engineering Company",
+    description: "Automation of RFQ and Manufacturing Engineering Process. Extraction of BOM from RFQ documents, mapping the pricing of each part number to improve the turn around for RFQ and during project execution, mapping and creating the Work Instructions using GenAI and historical Data.",
     progress: 95,
     color: "primary"
   },
   {
-    icon: Users,
+    image: evMan,
     value: "10K+",
-    label: "Healthcare Consulting (UK)",
-    description: "Specialty medicine logistics platform",
+    label: "2W EV Manufacturer",
+    description: "End to End Consulting to Technology Partner for Architecture, Design and Implementation for Mobile App, Web Application, Vehicle Data Integration for SOC/SOH, tracking monitoring, configuring the vehicles for B2C and B2B user personas.",
     progress: 88,
     color: "secondary"
   },
   {
-    icon: Clock,
+    image: sports,
     value: "99.9%",
-    label: "EV Manufacturer",
-    description: "Mobile & B2B platform for vehicle health & tracking",
+    label: "Sports and Events",
+    description: "E2E Consulting and Implementation for Pickle Ball League Player and Tournament software and also Event Management System for UK company.",
     progress: 99,
     color: "accent"
   },
   {
-    icon: Award,
+    image: pharma,
     value: "24/7",
-    label: "Pickleball Sports League",
-    description: "Player draft management and analytics",
+    label: "Healthcare and Pharma Specialty Medicine Delivery",
+    description: "Pharma Major manufactures Cancer treatment which loses 50% life in 3 days. Hospitals would like the delivery of product just before treatment date leading to creating complete custom system for Order Management, Build Plan, Logistics and inventory management for this pharma player.",
     progress: 100,
     color: "primary"
   },
-  {
-    icon: Users,
-    value: "10K+",
-    label: "Cloud FinOps",
-    description: "Cloud cost reduction by 75% via FinOps and re-architecture",
-    progress: 88,
-    color: "secondary"
-  },
-  {
-    icon: TrendingUp,
-    value: "500+",
-    label: "AI Talent Marketplace Platform",
-    description: "Cut down Talent Hiring cycle across contracting and full time hires",
-    progress: 95,
-    color: "primary"
-  }
 ];
 
 export const TechStats = () => {
@@ -84,15 +72,19 @@ export const TechStats = () => {
           {stats.map((stat, index) => (
             <div 
               key={stat.label} 
-              className="glass-card p-8 rounded-2xl cyber-glow group hover:neural-pulse transition-all duration-500"
+              className="glass-card p-8 rounded-2xl cyber-glow group "
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="space-y-6">
                 {/* Icon and Value */}
                 <div className="flex items-center justify-between">
-                  <div className={`p-3 rounded-xl bg-${stat.color}/20`}>
-                    <stat.icon className={`w-8 h-8 text-${stat.color}`} />
-                  </div>
+                  {/* <div className={`p-3 rounded-xl bg-${stat.color}/20`}> */}
+                    <img
+                      src={stat.image}
+                      alt={stat.label}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+{/* </div> */}
                   <div className="text-right">
                     <div className={`text-3xl font-bold text-${stat.color} matrix-text`}>
                       {stat.value}
@@ -129,16 +121,16 @@ export const TechStats = () => {
         {/* Additional Metrics */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="glass-card p-6 rounded-xl text-center space-y-3">
-            <div className="text-2xl font-bold text-primary">50TB+</div>
-            <div className="text-sm text-muted-foreground">Data Processed Daily</div>
+            <div className="text-2xl font-bold text-primary">25-35%</div>
+            <div className="text-sm text-muted-foreground">Cost Savings</div>
           </div>
           <div className="glass-card p-6 rounded-xl text-center space-y-3">
-            <div className="text-2xl font-bold text-secondary">95%</div>
-            <div className="text-sm text-muted-foreground">Cost Reduction Average</div>
+            <div className="text-2xl font-bold text-secondary">100%</div>
+            <div className="text-sm text-muted-foreground">Quality Delivered</div>
           </div>
           <div className="glass-card p-6 rounded-xl text-center space-y-3">
-            <div className="text-2xl font-bold text-accent">3.5x</div>
-            <div className="text-sm text-muted-foreground">Productivity Increase</div>
+            <div className="text-2xl font-bold text-accent">100%</div>
+            <div className="text-sm text-muted-foreground">Net Promoter Score</div>
           </div>
         </div>
       </div>

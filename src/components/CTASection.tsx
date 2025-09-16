@@ -12,6 +12,8 @@ import {
   ArrowRight,
   Sparkles
 } from "lucide-react";
+import { MdLocationOn } from "react-icons/md";
+
 
 export const CTASection = () => {
   return (
@@ -115,7 +117,7 @@ export const CTASection = () => {
 
             <div className="space-y-4">
               {/* Direct Call */}
-              <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
+              {/* <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 rounded-xl bg-primary/20 group-hover:bg-primary/30 transition-colors">
                     <Phone className="w-6 h-6 text-primary" />
@@ -126,7 +128,7 @@ export const CTASection = () => {
                     <p className="text-primary font-medium">+1 (555) 123-4567</p>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
               {/* Email Support */}
               <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
@@ -136,8 +138,9 @@ export const CTASection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email Support</h4>
-                    <p className="text-sm text-muted-foreground">Get detailed responses</p>
-                    <p className="text-secondary font-medium">ai-solutions@company.com</p>
+                    <p className="text-sm text-muted-foreground">Got a screen to share with us?</p>
+                    <p className="text-sm text-muted-foreground">Mail us your account queries at:</p>
+                    <p className="text-secondary font-medium">contact@flexc.work</p>
                   </div>
                 </CardContent>
               </Card>
@@ -146,15 +149,44 @@ export const CTASection = () => {
               <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 rounded-xl bg-accent/20 group-hover:bg-accent/30 transition-colors">
-                    <Calendar className="w-6 h-6 text-accent" />
+                    <MdLocationOn className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Schedule Meeting</h4>
-                    <p className="text-sm text-muted-foreground">Book a strategy session</p>
-                    <p className="text-accent font-medium">calendly.com/ai-consultation</p>
+                    <h4 className="font-semibold text-foreground">Pune, Maharashtra, India</h4>
+                    <p className="text-sm text-muted-foreground">4th Floor, The Minar Apartment, D2, Law College Road,</p>
+                    <p className="text-sm text-muted-foreground">Opp. Maruti Suzuki Showroom, Shanti Sheela Society,</p>
+                    <p className="text-sm text-muted-foreground">Apex Colony,Erandwane, Pune, Maharashtra 411038</p>
+              
                   </div>
                 </CardContent>
               </Card>
+
+              <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-accent/20 group-hover:bg-accent/30 transition-colors">
+                    <MdLocationOn className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                  
+                    <h4 className="font-semibold text-foreground">Gurugram, Haryana, India</h4>
+                    <p className="text-sm text-muted-foreground">Encubate Tech Pvt. Ltd.,</p>
+                    <p className="text-sm text-muted-foreground">944, Block C,</p>
+                    <p className="text-sm text-muted-foreground">Sushant Lok Phase 01,</p>
+                    <p className="text-sm text-muted-foreground">Gurugram, Haryana - 122001</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+               <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground">CIN - U72900HR2020PTC086931</h4>
+                    <h4 className="font-semibold text-foreground">GSTIN - 06AAFCE9358P1ZV</h4>
+                    <h4 className="font-semibold text-foreground">PAN - AAFCE9358P</h4>
+                  </div>
+                </CardContent>
+              </Card>
+
             </div>
 
             {/* Quick Stats */}
