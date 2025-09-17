@@ -40,7 +40,7 @@ const benefits = [
   "Custom training and knowledge transfer"
 ];
 
-export const DigitalOfferingsSection = () => {
+export const WhyChooseUs = () => {
   return (
     <section id="digital-offerings" className="py-24 relative bg-gradient-to-r from-secondary to-accent">
       <div className="container mx-auto px-6">
@@ -48,7 +48,7 @@ export const DigitalOfferingsSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <Badge className="bg-white/20 text-white border-white/30 px-4 py-2">
-              Why Choose TechFlow
+              Why Choose FlexC
             </Badge>
             
             <div className="space-y-6">

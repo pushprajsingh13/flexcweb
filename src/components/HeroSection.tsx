@@ -57,16 +57,16 @@ export const HeroSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">5+</div>
-                <div className="text-sm text-muted-foreground">Industry Domains</div>
-              </div>
-              <div className="text-center">
                 <div className="text-3xl font-bold text-secondary">50+</div>
                 <div className="text-sm text-muted-foreground">Satisfied Clients</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-accent">100+</div>
                 <div className="text-sm text-muted-foreground">AI Model Deployed</div>
+              </div>
+               <div className="text-center">
+                <div className="text-3xl font-bold text-accent">25%-50%</div>
+                <div className="text-sm text-muted-foreground">Cost Savings</div>
               </div>
             </div>
           </div>

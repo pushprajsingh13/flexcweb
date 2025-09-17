@@ -1,10 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { TrendingUp, Users, Clock, Award } from "lucide-react";
-import aeroEngg from "../assets/aeroEngg.png";
-import evMan from "../assets/evMan.png";
-import sports from "../assets/sports.png";
-import pharma from "../assets/pharma.png";
+import aeroEngg from "../assets/aero.jpg";
+import evMan from "../assets/evBike.jpeg";
+import sports from "../assets/sports.jpg";
+import pharma from "../assets/doctor.jpg";
 
 const stats = [
   {
@@ -84,12 +84,6 @@ export const TechStats = () => {
                       alt={stat.label}
                       className="w-12 h-12 rounded-full object-cover"
                     />
-{/* </div> */}
-                  <div className="text-right">
-                    <div className={`text-3xl font-bold text-${stat.color} matrix-text`}>
-                      {stat.value}
-                    </div>
-                  </div>
                 </div>
 
                 {/* Label and Description */}
@@ -97,22 +91,11 @@ export const TechStats = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">
                     {stat.label}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {stat.description}
-                  </p>
+                <p className="text-sm text-muted-foreground leading-relaxed text-justify">
+                  {stat.description}
+                </p>
                 </div>
 
-                {/* Progress Bar */}
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Performance</span>
-                    <span className={`text-${stat.color} font-medium`}>{stat.progress}%</span>
-                  </div>
-                  <Progress 
-                    value={stat.progress} 
-                    className="h-2 holo-border"
-                  />
-                </div>
               </div>
             </div>
           ))}

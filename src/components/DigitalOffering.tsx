@@ -51,7 +51,7 @@ const reasons = [
   }
 ];
 
-export const WhyChooseSection = () => {
+export const DigitalOffering = () => {
   return (
     <section id="why-choose" className="py-24 relative bg-gradient-subtle">
       <div className="container mx-auto px-6">
