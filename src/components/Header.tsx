@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap, Sparkles } from "lucide-react";
+import logo from "../assets/flexc_logo.png";
 
 const navigation = [
   { name: "Home", href: "#hero" },
@@ -44,14 +45,17 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const elementId = href.slice(1);
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsOpen(false);
-  };
+const scrollToSection = (href: string) => {
+  const elementId = href.slice(1);
+  const element = document.getElementById(elementId);
+  if (element) {
+    const headerOffset = 80; 
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  }
+  setIsOpen(false);
+};
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${
@@ -71,6 +75,13 @@ export const Header = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex items-center justify-center h-20">
+          <a href="https://www.flexc.work/" className="mr-10 cursor-pointer" target="_blank">
+            <img 
+              src={logo}   
+              alt="Logo" 
+              className="h-10 w-auto"
+            />
+          </a>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
             {navigation.map((item) => (
@@ -99,6 +110,8 @@ export const Header = () => {
               </button>
             ))}
           </nav>
+
+      
 
           {/* Mobile menu button */}
           <div className="md:hidden">

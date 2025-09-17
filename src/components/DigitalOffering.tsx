@@ -8,10 +8,13 @@ import {
   TrendingUp,
   Heart
 } from "lucide-react";
+import { BsCurrencyDollar } from "react-icons/bs";
+import { GoPeople } from "react-icons/go";
+import { TbCloudDollar } from "react-icons/tb";
 
 const reasons = [
   {
-    icon: Zap,
+    icon: BsCurrencyDollar,
     title: "Cost Visibility",
     description: "Analyze and reduce cloud costs.",
     color: "primary"
@@ -23,7 +26,7 @@ const reasons = [
     color: "secondary"
   },
   {
-    icon: Globe,
+    icon: TbCloudDollar,
     title: "Cloud Optimization",
     description: "Optimize cloud architecture.",
     color: "accent"
@@ -35,7 +38,7 @@ const reasons = [
     color: "primary"
   },
   {
-    icon: TrendingUp,
+    icon: GoPeople,
     title: "Business Alignment",
     description: "Drive governance and efficiency across multicloud setups.",
     color: "secondary"
@@ -48,13 +51,13 @@ const reasons = [
   }
 ];
 
-export const WhyChooseSection = () => {
+export const DigitalOffering = () => {
   return (
     <section id="why-choose" className="py-24 relative bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-2 mb-4">
-            Why Choose Us
+            Cloud Operations Delivered
           </Badge>
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-professional bg-clip-text text-transparent">
@@ -92,13 +95,13 @@ export const WhyChooseSection = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-8 p-8 rounded-2xl bg-gradient-surface border border-border/50">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-1">500+</div>
-              <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              <div className="text-3xl font-bold text-primary mb-1">80%</div>
+              <div className="text-sm text-muted-foreground">Efficiency</div>
             </div>
             <div className="w-px h-12 bg-border"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-secondary mb-1">99.9%</div>
-              <div className="text-sm text-muted-foreground">Uptime Guarantee</div>
+              <div className="text-3xl font-bold text-secondary mb-1">25%</div>
+              <div className="text-sm text-muted-foreground">Cost Savings</div>
             </div>
             <div className="w-px h-12 bg-border"></div>
             <div className="text-center">

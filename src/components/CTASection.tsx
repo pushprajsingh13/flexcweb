@@ -1,19 +1,98 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  Rocket, 
-  MessageSquare, 
-  Phone, 
-  Mail, 
-  Calendar,
+import Swal from "sweetalert2";
+import {
+  Rocket,
+  MessageSquare,
+  Phone,
+  Mail,
   ArrowRight,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
+import { MdLocationOn } from "react-icons/md";
 
 export const CTASection = () => {
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    cname: "",
+    choose: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  // handle input changes
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // handle submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      // Change this API endpoint as needed
+      const response = await fetch(
+        "http://localhost:8081/api/ProjectPreview",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+         Swal.fire({
+          icon: "success",
+          title: "Submitted!",
+          text: "Submitted successfully!",
+          showConfirmButton: false,
+          timer: 2000, 
+        });
+        setFormData({
+          fname: "",
+          lname: "",
+          email: "",
+          cname: "",
+          choose: "",
+          phone: "",
+          message: ""
+        });
+      } else {
+         Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: "Submission failed!",
+          showConfirmButton: false,
+          timer: 2000, 
+        });
+      }
+    } catch (error) {
+      console.error(error);
+       Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: "Submission failed!",
+          showConfirmButton: false,
+          timer: 2000, 
+        });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Animated Background */}
@@ -36,8 +115,8 @@ export const CTASection = () => {
             <span className="text-foreground">with AI Excellence</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Looking to build, scale, or optimize your tech stack?
-            Partner with FlexC — your trusted ally in engineering innovation.
+            Looking to build, scale, or optimize your tech stack? Partner with
+            FlexC — your trusted ally in engineering innovation.
           </p>
         </div>
 
@@ -51,54 +130,119 @@ export const CTASection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">First Name</label>
-                  <Input 
-                    placeholder="Enter your first name" 
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      First Name
+                    </label>
+                    <Input
+                      placeholder="Enter your first name"
+                      className="holo-border bg-input/50 backdrop-blur-sm"
+                      name="fname"
+                      value={formData.fname}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      Last Name
+                    </label>
+                    <Input
+                      placeholder="Enter your last name"
+                      className="holo-border bg-input/50 backdrop-blur-sm"
+                      name="lname"
+                      value={formData.lname}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Business Email
+                  </label>
+                  <Input
+                    type="email"
+                    placeholder="your.email@company.com"
                     className="holo-border bg-input/50 backdrop-blur-sm"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      Telephone
+                    </label>
+                    <Input
+                      type="tel"
+                      placeholder="Enter your telephone number"
+                      className="holo-border bg-input/50 backdrop-blur-sm"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      maxLength={10}      
+                      pattern="[0-9]{10}"  
+                      required
+                    />
+                  </div>
+                </div>
+
+ <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      Subject
+                    </label>
+                    <Input
+                      type="text"
+                      placeholder="Enter subject"
+                      className="holo-border bg-input/50 backdrop-blur-sm"
+                      name="choose"
+                      value={formData.choose}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Last Name</label>
-                  <Input 
-                    placeholder="Enter your last name" 
+                  <label className="text-sm font-medium text-foreground">
+                    Company
+                  </label>
+                  <Input
+                    placeholder="Your company name"
                     className="holo-border bg-input/50 backdrop-blur-sm"
+                    name="cname"
+                    value={formData.cname}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Business Email</label>
-                <Input 
-                  type="email" 
-                  placeholder="your.email@company.com" 
-                  className="holo-border bg-input/50 backdrop-blur-sm"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Company</label>
-                <Input 
-                  placeholder="Your company name" 
-                  className="holo-border bg-input/50 backdrop-blur-sm"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Project Details</label>
-                <Textarea 
-                  placeholder="Tell us about your AI requirements and goals..."
-                  rows={4}
-                  className="holo-border bg-input/50 backdrop-blur-sm resize-none"
-                />
-              </div>
-              
-              <Button className="w-full neural-pulse bg-gradient-to-r from-primary to-primary-glow">
-                <Sparkles className="w-5 h-5 mr-2" />
-                Get Free AI Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Project Details
+                  </label>
+                  <Textarea
+                    placeholder="Tell us about your AI requirements and goals..."
+                    rows={4}
+                    className="holo-border bg-input/50 backdrop-blur-sm resize-none"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <Button className="w-full neural-pulse bg-gradient-to-r from-primary to-primary-glow">
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  {loading ? "Submitting..." : "Get Free AI Consultation"}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </form>
             </CardContent>
           </Card>
 
@@ -109,25 +253,12 @@ export const CTASection = () => {
                 Multiple Ways to Connect
               </h3>
               <p className="text-muted-foreground">
-                Choose the method that works best for you to start your AI transformation.
+                Choose the method that works best for you to start your AI
+                transformation.
               </p>
             </div>
 
             <div className="space-y-4">
-              {/* Direct Call */}
-              <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="p-3 rounded-xl bg-primary/20 group-hover:bg-primary/30 transition-colors">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Direct Call</h4>
-                    <p className="text-sm text-muted-foreground">Speak with our AI experts</p>
-                    <p className="text-primary font-medium">+1 (555) 123-4567</p>
-                  </div>
-                </CardContent>
-              </Card>
-
               {/* Email Support */}
               <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-6 flex items-center gap-4">
@@ -135,23 +266,82 @@ export const CTASection = () => {
                     <Mail className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Email Support</h4>
-                    <p className="text-sm text-muted-foreground">Get detailed responses</p>
-                    <p className="text-secondary font-medium">ai-solutions@company.com</p>
+                    <h4 className="font-semibold text-foreground">
+                      Email Support
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Got a screen to share with us?
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Mail us your account queries at:
+                    </p>
+                    <p className="text-secondary font-medium">
+                      contact@flexc.work
+                    </p>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Schedule Meeting */}
+              {/* Pune Office */}
               <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 rounded-xl bg-accent/20 group-hover:bg-accent/30 transition-colors">
-                    <Calendar className="w-6 h-6 text-accent" />
+                    <MdLocationOn className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Schedule Meeting</h4>
-                    <p className="text-sm text-muted-foreground">Book a strategy session</p>
-                    <p className="text-accent font-medium">calendly.com/ai-consultation</p>
+                    <h4 className="font-semibold text-foreground">
+                      Pune, Maharashtra, India
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      4th Floor, The Minar Apartment, D2, Law College Road,
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Opp. Maruti Suzuki Showroom, Shanti Sheela Society,
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Apex Colony, Erandwane, Pune, Maharashtra 411038
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Gurugram Office */}
+              <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-accent/20 group-hover:bg-accent/30 transition-colors">
+                    <MdLocationOn className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">
+                      Gurugram, Haryana, India
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Encubate Tech Pvt. Ltd.,
+                    </p>
+                    <p className="text-sm text-muted-foreground">944, Block C,</p>
+                    <p className="text-sm text-muted-foreground">
+                      Sushant Lok Phase 01,
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Gurugram, Haryana - 122001
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Company Info */}
+              <Card className="glass-card hover:cyber-glow transition-all duration-300 group cursor-pointer">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground">
+                      CIN - U72900HR2020PTC086931
+                    </h4>
+                    <h4 className="font-semibold text-foreground">
+                      GSTIN - 06AAFCE9358P1ZV
+                    </h4>
+                    <h4 className="font-semibold text-foreground">
+                      PAN - AAFCE9358P
+                    </h4>
                   </div>
                 </CardContent>
               </Card>
@@ -161,11 +351,15 @@ export const CTASection = () => {
             <div className="grid grid-cols-2 gap-4 pt-8">
               <div className="glass-card p-4 text-center">
                 <div className="text-2xl font-bold text-primary">&lt; 24h</div>
-                <div className="text-sm text-muted-foreground">Response Time</div>
+                <div className="text-sm text-muted-foreground">
+                  Response Time
+                </div>
               </div>
               <div className="glass-card p-4 text-center">
                 <div className="text-2xl font-bold text-secondary">Free</div>
-                <div className="text-sm text-muted-foreground">Initial Consultation</div>
+                <div className="text-sm text-muted-foreground">
+                  Initial Consultation
+                </div>
               </div>
             </div>
           </div>

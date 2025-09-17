@@ -125,11 +125,13 @@ export const AIToolsSection = () => {
                         ))}
                       </div>
                     </div>
-                    
-                    <Button className="w-fit group/btn">
-                      Explore Tool
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
+                    <a href="https://www.flexc.work/contact-us" className="mt-6 inline-block" target="_blank">
+                     <Button className="w-fit group/btn">
+                        Request Demo
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </a>
+                   
                   </div>
                 </div>
                 
@@ -165,7 +167,7 @@ export const AIToolsSection = () => {
                 </div>
                 <div className="w-px h-8 bg-border"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-accent mb-1">99.99%</div>
+                  <div className="text-2xl font-bold text-accent mb-1">80-90%</div>
                   <div className="text-sm text-muted-foreground">Accuracy Rate</div>
                 </div>
               </div>

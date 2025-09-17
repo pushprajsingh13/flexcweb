@@ -24,32 +24,50 @@ const services = [
   {
     category: "Artificial Intelligence",
     icon: Brain,
-    color: "primary",
-    image: mlAlgorithms,
     services: [
       {
         title: "AI Solutions",
         description: "Harness the power of advanced AI platforms — including LLMs and agentic models — to automate processes, create intelligent conversational interfaces, and drive business insights.",
         features: ["Deep Learning", "Neural Networks", "Computer Vision", "NLP Processing"],
       },
+    ],
+  },
+  {
+    category: "Data Engineering & Analytics",
+    icon: Database,
+    services: [
       {
         title: "Data Engineering & Analytics",
-        description: "Build robust, scalable data architectures and pipelines. Our analytics solutions enable better decisions through real-time insights and powerful data visualizations.",
+        description:
+          "Build robust, scalable data architectures and pipelines. Our analytics solutions enable better decisions through real-time insights and powerful data visualizations.",
         features: ["24/7 Support", "Multi-language", "Context Aware", "Custom Training"],
       },
+    ],
+  },
+  {
+    category: "Enterprise Platforms",
+    icon: Cloud,
+    services: [
       {
         title: "Enterprise Platform Implementation",
         description: "Accelerate digital transformation through implementation of enterprise-grade platforms like",
         features: ["Salesforce", "E42.ai", "Nvidia Omniverse", "Robotic Process Automation (RPA)","DigiUsher (Cloud & AI FinOps)"],
       },
+    ],
+  },
+  {
+    category: "Application Development",
+    icon: Cog,
+    services: [
       {
         title: "Full Stack Web & App Development",
         description: "We develop responsive, modern web and mobile applications using today’s leading frameworks — ensuring performance, usability, and scalability.",
         features: ["Real-time Data", "Custom Dashboards", "Risk Assessment", "Performance Metrics"],
-      }
-    ]
+      },
+    ],
   },
 ];
+
 
 export const ServicesGrid = () => {
   return (
@@ -73,58 +91,56 @@ export const ServicesGrid = () => {
         </div>
 
         {/* All Services in Single Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {services.map((category) => 
-            category.services.map((service, serviceIndex) => (
-              <Card key={`${category.category}-${service.title}`} className="glass-card hover:cyber-glow transition-all duration-300 group">
-                <CardHeader className="space-y-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20">
-                      <category.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <Badge variant="outline" className="text-xs">
-                      {category.category}
-                    </Badge>
+       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {services.map((category) =>
+          category.services.map((service) => (
+            <Card
+              key={`${category.category}-${service.title}`}
+              className="glass-card hover:cyber-glow transition-all duration-300 group"
+            >
+              <CardHeader className="space-y-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20">
+                    <category.icon className="w-6 h-6 text-primary" />
                   </div>
-                  
-                  <div className="flex items-start justify-between">
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      {service.title}
-                    </CardTitle>
-                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                  </div>
-                  
-                  <CardDescription className="text-muted-foreground">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-6">
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-semibold text-foreground">Key Features:</h4>
-                    <div className="grid grid-cols-1 gap-2">
-                      {service.features.slice(0, 5).map((feature) => (
-                        <Badge 
-                          key={feature} 
-                          variant="outline" 
-                          className="text-xs border-border/30 hover:border-primary/50 transition-colors justify-start"
-                        >
-                          {feature}
-                        </Badge>
-                      ))}
-                      {/*{service.features.length > 3 && (
-                        <Badge variant="outline" className="text-xs opacity-50">
-                          +{service.features.length - 3} more
-                        </Badge>
-                      )}*/}
-                    </div>
-                  </div>
+                  <Badge variant="outline" className="text-xs">
+                    {category.category}
+                  </Badge>
+                </div>
 
-                </CardContent>
-              </Card>
-            ))
-          )}
-        </div>
+                <div className="flex items-start justify-between">
+                  <CardTitle className="text-xl">
+                    {service.title}
+                  </CardTitle>
+                  {/* <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" /> */}
+                </div>
+
+                <CardDescription className="text-muted-foreground">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="space-y-6">
+                <div className="space-y-3">
+                  <h4 className="text-sm font-semibold text-foreground">Key Features:</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    {service.features.slice(0, 5).map((feature) => (
+                      <Badge
+                        key={feature}
+                        variant="outline"
+                        className="text-xs border-border/30 hover:border-primary/50 transition-colors justify-start"
+                      >
+                        {feature}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))
+        )}
+      </div>
+
       </div>
     </section>
   );
