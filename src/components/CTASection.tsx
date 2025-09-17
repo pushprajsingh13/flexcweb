@@ -43,7 +43,7 @@ export const CTASection = () => {
     try {
       // Change this API endpoint as needed
       const response = await fetch(
-        "http://localhost:8081/api/ProjectPreview",
+        "https://flexc.work/backend/api/ProjectPreview",
         {
           method: "POST",
           headers: {
