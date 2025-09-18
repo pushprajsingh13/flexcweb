@@ -56,8 +56,8 @@ export const CTASection = () => {
       if (response.ok) {
          Swal.fire({
           icon: "success",
-          title: "Submitted!",
-          text: "Submitted successfully!",
+          title: "Submitted successfully!",
+          text: "We will get back to you soon",
           showConfirmButton: false,
           timer: 2000, 
         });
