@@ -65,7 +65,24 @@ const aiTools = [
   }
 ];
 
+
 export const AIToolsSection = () => {
+      const scrollToSection = (href: string) => {
+      const elementId = href.startsWith("#") ? href.slice(1) : href;
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        const headerOffset = 80; 
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    };
+
   return (
     <section id="ai-tools" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -125,7 +142,10 @@ export const AIToolsSection = () => {
                         ))}
                       </div>
                     </div>
-                    <a href="https://www.flexc.work/contact-us" className="mt-6 inline-block" target="_blank">
+                    <a className="mt-6 inline-block"  onClick={(e) => {
+    e.preventDefault(); // stop default jump
+    scrollToSection("#contact");
+  }}>
                      <Button className="w-fit group/btn">
                         Request Demo
                         <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />

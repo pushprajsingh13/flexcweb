@@ -41,6 +41,21 @@ const benefits = [
 ];
 
 export const WhyChooseUs = () => {
+      const scrollToSection = (href: string) => {
+      const elementId = href.startsWith("#") ? href.slice(1) : href;
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        const headerOffset = 80; 
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    };
   return (
     <section id="digital-offerings" className="py-24 relative bg-gradient-to-r from-secondary to-accent">
       <div className="container mx-auto px-6">
@@ -72,7 +87,11 @@ export const WhyChooseUs = () => {
               ))}
             </div>
             
-          <a href="https://www.flexc.work/contact-us" className="mt-6 inline-block" target="_blank" rel="noopener noreferrer">
+          <a className="mt-6 inline-block" rel="noopener noreferrer"  
+            onClick={(e) => {
+              e.preventDefault(); // stop default jump
+              scrollToSection("#contact");
+            }}>
             <Button 
               size="lg" 
               className="bg-white text-secondary hover:bg-white/90 group"
