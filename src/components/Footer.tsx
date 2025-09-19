@@ -2,8 +2,24 @@ import React from "react";
 import { FaYoutube, FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
 import logo from "../assets/flexc_logo.png";
 import { BsTwitterX } from "react-icons/bs";
+import { GrInstagram } from "react-icons/gr";
 
 function Footer() {
+   const scrollToSection = (href: string) => {
+      const elementId = href.startsWith("#") ? href.slice(1) : href;
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        const headerOffset = 80; 
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    };
   return (
     <footer className="bg-[#2c2f33] text-gray-300 py-10 px-6 md:px-20">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-gray-300">
@@ -27,6 +43,7 @@ function Footer() {
             <a href="https://www.youtube.com/@flexc" target="_blank" className="hover:text-white"><FaYoutube /></a>
             <a href="https://x.com/FlexcWork" target="_blank" className="hover:text-white"><BsTwitterX /></a>
             <a href="https://www.linkedin.com/company/flexc/" target="_blank" className="hover:text-white"><FaLinkedinIn  /></a>
+            <a href="https://www.instagram.com/flexc.work?igsh=enJmdjhzYnN6anIz" target="_blank" className="hover:text-white"><GrInstagram  /></a>
           </div>
         </div>
 
@@ -52,7 +69,18 @@ function Footer() {
             <li><a href="https://flexc.work/talent" target="_blank" className="hover:text-white">FlexC for Professionals</a></li>
             <li><a href="https://flexc.work/recruiter" target="_blank" className="hover:text-white">FlexC for Recruiter</a></li>
             <li><a href="https://flexc.work/octo" target="_blank" className="hover:text-white">Octo</a></li>
+          </ul><br/>
+
+        <h3 className="text-white font-semibold mb-4">Services</h3>
+          <ul className="space-y-2 text-xs">
+            <li><a className="hover:text-white cursor-pointer"
+             onClick={(e) => {
+                e.preventDefault(); 
+                scrollToSection("#hero");
+              }}>
+                Home</a></li>
           </ul>
+         
         </div>
         </div>
 

@@ -143,9 +143,9 @@ export const AIToolsSection = () => {
                       </div>
                     </div>
                     <a className="mt-6 inline-block"  onClick={(e) => {
-    e.preventDefault(); // stop default jump
-    scrollToSection("#contact");
-  }}>
+                        e.preventDefault(); 
+                        scrollToSection("#contact");
+                      }}>
                      <Button className="w-fit group/btn">
                         Request Demo
                         <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
