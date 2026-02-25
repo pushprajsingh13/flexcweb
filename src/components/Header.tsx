@@ -83,12 +83,12 @@ const scrollToSection = (href: string) => {
             />
           </a>
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-2">
+          <nav className="hidden md:flex items-center space-x-3">
             {navigation.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 group ${
+                className={`relative px-3.5 py-2 text-sm font-medium rounded-xl transition-all duration-300 group ${
                   item.isContact 
                     ? "text-white bg-gradient-to-r from-primary to-secondary shadow-lg shadow-primary/30 hover:shadow-primary/50"
                     : activeSection === item.href.slice(1)

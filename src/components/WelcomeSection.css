@@ -1,0 +1,218 @@
+/* WelcomeSection Styles */
+
+#welcome-section {
+  scroll-margin-top:30px;
+}
+
+.blue-layer-bg-welcome {
+  background: linear-gradient(109deg, #f3f8ff 0%, #daf0ff 100%);
+  min-height: 100vh;
+  padding: 1.5rem 0;
+}
+
+.fc-web2-container {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+/* .container, .container-lg, .container-md, .container-sm, .container-xl {
+  max-width: 1400px;
+} */
+
+.welcome-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2.5rem;
+}
+
+.welcome-main-row {
+  margin: 1rem 0;
+}
+
+.welcome-page-button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.75rem;
+  width: 100%;
+  position: relative;
+}
+
+.welcome-page-button:hover {
+  transform: translateY(-5px);
+}
+
+.fc-web2-container .welcome-page-image {
+  height: 400px !important;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.fc-web2-container .welcome-slogans {
+  padding: 10px 24px;
+  background: #fff;
+  box-shadow: 0 8px 10px #ebf6ff;
+  font-family: sans-serif !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  display: flex;
+  align-items: center;
+  color: #1976d2 !important;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0 10px;
+}
+
+.fc-web2-container .welcome-consultant-slogan {
+  position: absolute;
+  width: 174px;
+  height: 54px;
+  left: -20px;
+  top: -10px;
+  border-radius: 20px 20px 0 20px;
+ font-family: sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  color: #1976d2 !important;
+}
+
+.fc-web2-container .welcome-org-slogan {
+  position: absolute;
+  width: 158px;
+  height: 54px;
+  left: -8px;
+  top: 55px;
+  border-radius: 20px 0 20px 20px;
+  font-family: sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  color: #1976d2 !important;
+}
+
+.fc-web2-container .welcome-hr-slogan {
+  position: absolute;
+  width: 174px;
+  height: 54px;
+  right: -20px;
+  top: -10px;
+  border-radius: 20px 20px 20px 0;
+   font-family: sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  color: #1976d2 !important;
+}
+
+.fc-web2-container .bg_gradient_div_welcome_page {
+  background: linear-gradient(180deg, #aeccff, #d7d8ff);
+  height: 164px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.fc-web2-container .welcome-h4 {
+  margin-bottom: .5rem;
+  font-weight: 400 !important;
+  font-family: sans-serif !important;
+  line-height: 1.875rem !important;
+  font-size: 24px !important;
+}
+
+.fc-web2-container span.welcome-h4 {
+  margin-bottom: .5rem;
+  font-weight: 400 !important;
+  font-family: sans-serif !important;
+  line-height: 1.875rem !important;
+  font-size: 24px !important;
+  display: block;
+}
+
+/* Combined selector for text labels */
+.fc-web2-container span.welcome-h4.font-weight-600.text-dark-1 {
+  font-weight: 600 !important;
+  font-family: sans-serif !important;
+  font-size: 24px !important;
+  line-height: 1.875rem !important;
+  color: #2d3134 !important;
+}
+
+/* Typography */
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.fc-web2-container .font-weight-600 {
+  font-weight: 600 !important;
+  font-family: sans-serif !important;
+  font-size: 24px !important;
+  line-height: 1.875rem !important;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.fc-web2-container .text-dark-1 {
+  color: #2d3134 !important;
+  font-family: sans-serif !important;
+  font-size: 24px !important;
+  line-height: 1.875rem !important;
+}
+
+.text-dark-3 {
+  color: #7f8c8d;
+}
+
+.text-secondary {
+  color: #764ba2;
+}
+
+.line-height-27 {
+  line-height: 27px;
+}
+.welcome-text {
+  font-family: sans-serif !important;
+  font-size: 2rem;
+  color: var(--foreground);
+  margin: 0;
+}
+.font-new{
+        font-family: sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .fc-web2-container .bg_gradient_div_welcome_page {
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-page-image {
+    max-width: 140px;
+  }
+  
+  .welcome-slogans {
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+  
+  .welcome-h4 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1370px !important;
+  }
+}
