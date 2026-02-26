@@ -7,16 +7,16 @@ export const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg pt-16 mt-8">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0300-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-secondary/10 blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-3/4 left-1/2 w-48 h-48 rounded-full bg-accent/10 blur-3xl animate-pulse delay-500"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 -mt-14">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-2">
             <div className="space-y-4">
               {/* <Badge className="cyber-glow bg-primary/20 text-primary border-primary/30 px-4 py-2">
                 <Brain className="w-4 h-4 mr-2" />
@@ -45,17 +45,17 @@ export const HeroSection = () => {
               </Button >
               </a>
               
-            <a href="https://www.flexc.work/contact-us" target="_blank" rel="noopener noreferrer">
+            <a href="#welcome-section">
                <Button size="lg" variant="outline" className="holo-border border-primary/30 hover:bg-primary/10">
-                <Cloud className="w-5 h-5 mr-2" />
-                  Contact Us
+                {/* <Cloud className="w-5 h-5 mr-2" /> */}
+                  Explore Product
               </Button>
             </a>
              
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
+            <div className="grid grid-cols-3 gap-6 pt-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-secondary">50+</div>
                 <div className="text-sm text-muted-foreground">Satisfied Clients</div>
