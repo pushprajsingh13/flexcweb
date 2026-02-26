@@ -6,6 +6,7 @@ import logo from "../assets/flexc_logo.png";
 const navigation = [
   { name: "Home", href: "#hero" },
   { name: "Services", href: "#services" },
+  {name : "Product" ,href: "#welcome-section"},
   { name: "Why Choose Us", href: "#digital-offerings" },
   { name: "Digital Offerings", href: "#why-choose" },
   { name: "AI Tools", href: "#ai-tools" },
