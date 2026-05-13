@@ -337,7 +337,7 @@ export const CTASection = () => {
                       CIN - U72900HR2020PTC086931
                     </h4>
                     <h4 className="font-semibold text-foreground">
-                      GSTIN - 06AAFCE9358P1ZV
+                      GSTIN - 27AAFCE9358P1ZR
                     </h4>
                     <h4 className="font-semibold text-foreground">
                       PAN - AAFCE9358P
