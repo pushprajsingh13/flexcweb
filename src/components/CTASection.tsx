@@ -293,7 +293,7 @@ export const CTASection = () => {
                       Pune, Maharashtra, India
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      4th Floor, The Minar Apartment, D2, Law College Road,
+                        The Minar Apartment, D2, 4th Floor, Law College Road,
                     </p>
                     <p className="text-sm text-muted-foreground">
                       Opp. Maruti Suzuki Showroom, Shanti Sheela Society,
@@ -301,6 +301,10 @@ export const CTASection = () => {
                     <p className="text-sm text-muted-foreground">
                       Apex Colony, Erandwane, Pune, Maharashtra 411038
                     </p>
+                    <p className="text-sm text-muted-foreground">
+                      GSTIN - 27AAFCE9358P1ZR
+                    </p>
+
                   </div>
                 </CardContent>
               </Card>
@@ -325,6 +329,12 @@ export const CTASection = () => {
                     <p className="text-sm text-muted-foreground">
                       Gurugram, Haryana - 122001
                     </p>
+                    <p className="text-sm text-muted-foreground">
+                    GSTIN - 06AAFCE9358P1ZV
+                    </p>
+                    <p>
+
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -336,9 +346,7 @@ export const CTASection = () => {
                     <h4 className="font-semibold text-foreground">
                       CIN - U72900HR2020PTC086931
                     </h4>
-                    <h4 className="font-semibold text-foreground">
-                      GSTIN - 27AAFCE9358P1ZR
-                    </h4>
+
                     <h4 className="font-semibold text-foreground">
                       PAN - AAFCE9358P
                     </h4>
