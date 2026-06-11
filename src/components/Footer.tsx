@@ -52,12 +52,12 @@ function Footer() {
           <h3 className="text-white font-semibold mb-4">Website</h3>
           <ul className="space-y-2 text-xs">
             <li><a href="https://flexc.work/" target="_blank" className="hover:text-white">Home</a></li>
-            <li><a href="https://flexc.work/aboutus" target="_blank" className="hover:text-white">About Us</a></li>
-            <li><a href="https://flexc.work/contact-us" className="hover:text-white" target="_blank">Contact Us</a></li>
-            <li><a href="https://flexc.work/enterprise" className="hover:text-white" target="_blank">Enterprise</a></li>
-            <li><a href="https://flexc.work/talent" className="hover:text-white" target="_blank">Talent</a></li>
-            <li><a href="https://flexc.work/recruiter" className="hover:text-white" target="_blank">Recruiter</a></li>
-            <li><a href="https://flexc.work/blogs" className="hover:text-white" target="_blank">Blogs</a></li>
+            <li><a href="https://flexc.work/product/aboutus" target="_blank" className="hover:text-white">About Us</a></li>
+            <li><a href="https://flexc.work/product/contact-us" className="hover:text-white" target="_blank">Contact Us</a></li>
+            <li><a href="https://flexc.work/product/enterprise" className="hover:text-white" target="_blank">Enterprise</a></li>
+            <li><a href="https://flexc.work/product/talent" className="hover:text-white" target="_blank">Talent</a></li>
+            <li><a href="https://flexc.work/product/recruiter" className="hover:text-white" target="_blank">Recruiter</a></li>
+            <li><a href="https://flexc.work/product/blogs" className="hover:text-white" target="_blank">Blogs</a></li>
           </ul>
         </div>
 
@@ -65,10 +65,10 @@ function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-4">Solutions</h3>
           <ul className="space-y-2 text-xs">
-            <li><a href="https://flexc.work/enterprise" target="_blank" className="hover:text-white">FlexC for Enterprises</a></li>
-            <li><a href="https://flexc.work/talent" target="_blank" className="hover:text-white">FlexC for Professionals</a></li>
-            <li><a href="https://flexc.work/recruiter" target="_blank" className="hover:text-white">FlexC for Recruiter</a></li>
-            <li><a href="https://flexc.work/octo" target="_blank" className="hover:text-white">Octo</a></li>
+            <li><a href="https://flexc.work/product/enterprise" target="_blank" className="hover:text-white">FlexC for Enterprises</a></li>
+            <li><a href="https://flexc.work/product/talent" target="_blank" className="hover:text-white">FlexC for Professionals</a></li>
+            <li><a href="https://flexc.work/product/recruiter" target="_blank" className="hover:text-white">FlexC for Recruiter</a></li>
+            <li><a href="https://flexc.work/product/octo" target="_blank" className="hover:text-white">Octo</a></li>
           </ul><br/>
 
         <h3 className="text-white font-semibold mb-4">Services</h3>
@@ -89,12 +89,12 @@ function Footer() {
           <h3 className="text-white font-semibold mb-4">Get started now</h3>
           <p className="text-xs mb-4">Ready to Join FlexC Community?</p>
           <div className="flex space-x-3 text-sm">
-           <a href="https://flexc.work/auth/signuphragency" target="_blank"> 
+           <a href="https://flexc.work/product/auth/signuphragency" target="_blank"> 
               <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
               Sign up
               </button>
            </a>
-           <a href="https://flexc.work/auth/signin" target="_blank">
+           <a href="https://flexc.work/product/auth/signin" target="_blank">
               <button className="border border-gray-400 hover:border-white px-4 py-2 rounded text-white">
               Login
             </button>
@@ -107,8 +107,8 @@ function Footer() {
       <div className="mt-10 border-t-2 border-gray-400 pt-4 flex flex-col md:flex-row justify-between items-center text-xs">
         <p>COPYRIGHT © 2025 ENCUBATE TECH PVT. LTD. ALL RIGHTS RESERVED.</p>
         <div className="flex space-x-4 mt-2 md:mt-0">
-          <a href="https://flexc.work/terms-of-use" target="_blank" className="hover:text-white">Terms and Conditions</a>
-          <a href="https://flexc.work/privacy-policy" target="_blank" className="hover:text-white">Privacy Policy</a>
+          <a href="https://flexc.work/product/terms-of-use" target="_blank" className="hover:text-white">Terms and Conditions</a>
+          <a href="https://flexc.work/product/privacy-policy" target="_blank" className="hover:text-white">Privacy Policy</a>
         </div>
       </div>
     </footer>

@@ -50,7 +50,7 @@ const WelcomeSection = (props) => {
               className="bg_gradient_div_welcome_page"
             ></div>
             <Col xs={4} sm={4} md={4} lg={4} className="text-center">
-              <a href="https://flexc.work/talent" target="_blank" rel="noopener noreferrer">
+              <a href="https://flexc.work/product/talent" target="_blank" rel="noopener noreferrer">
                 <button
                   className="m-0 welcome-page-button text-center"
                   style={{ background: "none", border: "none" }}
@@ -75,7 +75,7 @@ const WelcomeSection = (props) => {
               </a>
             </Col>
             <Col xs={4} sm={4} md={4} lg={4} className="text-center">
-              <a href="https://flexc.work/enterprise" target="_blank" rel="noopener noreferrer">
+              <a href="https://flexc.work/product/enterprise" target="_blank" rel="noopener noreferrer">
                 <button
                   className="h4 font-weight-600 text-dark-1 m-0 welcome-page-button text-center"
                   style={{ background: "none", border: "none" }}
@@ -102,7 +102,7 @@ const WelcomeSection = (props) => {
               </a>
             </Col>
             <Col xs={4} sm={4} md={4} lg={4} className="text-center">
-              <a href="https://flexc.work/recruiter" target="_blank" rel="noopener noreferrer">
+              <a href="https://flexc.work/product/recruiter" target="_blank" rel="noopener noreferrer">
                 <button
                   className="h4 font-weight-600 text-dark-1 m-0 welcome-page-button text-center"
                   style={{ background: "none", border: "none" }}
@@ -129,7 +129,7 @@ const WelcomeSection = (props) => {
           </Row>
           <Row>
             <Col xs={4} sm={4} md={4} lg={4} className="text-center">
-              <a href="https://flexc.work/talent" target="_blank" rel="noopener noreferrer">
+              <a href="https://flexc.work/product/talent" target="_blank" rel="noopener noreferrer">
                 <button
                   className="h4 font-weight-600 text-dark-1 m-0 welcome-page-button text-center"
                   style={{ background: "none", border: "none" }}
@@ -149,7 +149,7 @@ const WelcomeSection = (props) => {
               </a>
             </Col>
             <Col xs={4} sm={4} md={4} lg={4} className="text-center">
-              <a href="https://flexc.work/enterprise" target="_blank" rel="noopener noreferrer">
+              <a href="https://flexc.work/product/enterprise" target="_blank" rel="noopener noreferrer">
                 <button
                   className="h4 font-weight-600 text-dark-1 m-0 welcome-page-button text-center"
                   style={{ background: "none", border: "none" }}
@@ -169,7 +169,7 @@ const WelcomeSection = (props) => {
               </a>
             </Col>
             <Col xs={4} sm={4} md={4} lg={4} className="text-center">
-              <a href="https://flexc.work/recruiter" target="_blank" rel="noopener noreferrer">
+              <a href="https://flexc.work/product/recruiter" target="_blank" rel="noopener noreferrer">
                 <button
                   className="h4 font-weight-600 text-dark-1 m-0 welcome-page-button text-center"
                   style={{ background: "none", border: "none" }}
