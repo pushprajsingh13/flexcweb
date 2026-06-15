@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "../assets/flexc_logo.png";
+import { useLocation } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "#hero" },
@@ -12,6 +13,7 @@ const navigation = [
   { name: "AI Tools", href: "#ai-tools" },
   { name: "Tech Stats", href: "#tech-stats" },
   { name: "Process", href: "#process" },
+  { name: "GCC", href: "#gcc" },
   { name: "Transform Your Business with AI Excellence", href: "#contact", isContact: true },
 ];
 
@@ -19,7 +21,24 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.state?.scrollToContact) {
+      const contactSection = document.getElementById("contact");
+
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      // Clear state so it doesn't scroll again on refresh
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;

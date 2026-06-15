@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { ServicesGrid } from "@/components/ServicesGrid";
 import WelcomeSection from "@/components/WelcomeSection";
 import { DigitalOffering } from "@/components/DigitalOffering";
+import { GCCSection } from "@/components/GCCSection";
 import { AIToolsSection } from "@/components/AIToolsSection";
 import { TechStats } from "@/components/TechStats";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -22,6 +23,7 @@ const Index = () => {
       <AIToolsSection />
       <TechStats />
       <ProcessSection />
+      <GCCSection />
       <CTASection />
       <Footer />
     </div>

@@ -1,24 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
   Brain, 
   Cloud, 
-  Shield, 
   Cog, 
-  Link, 
   Database,
-  Cpu,
-  Network,
-  Bot,
-  Zap,
-  ArrowUpRight
+  Cpu
 } from "lucide-react";
-import cloudDatacenter from "@/assets/cloud-datacenter.jpg";
-import mlAlgorithms from "@/assets/ml-algorithms.jpg";
-import cybersecurity from "@/assets/cybersecurity.jpg";
-import automation from "@/assets/automation.jpg";
-import blockchain from "@/assets/blockchain.jpg";
 
 const services = [
   {

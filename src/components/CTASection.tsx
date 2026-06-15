@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 import {
   Rocket,
   MessageSquare,
-  Phone,
   Mail,
   ArrowRight,
   Sparkles,
