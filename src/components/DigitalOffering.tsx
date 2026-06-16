@@ -1,11 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Zap,
   Shield,
-  Globe,
   Lightbulb,
-  TrendingUp,
   Heart
 } from "lucide-react";
 import { BsCurrencyDollar } from "react-icons/bs";

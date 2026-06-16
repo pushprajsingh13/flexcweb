@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Brain, Cloud, Zap, ArrowRight } from "lucide-react";
+import { Brain, Zap, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/ai-neural-hero.jpg";
 
-export const HeroSection = () => {
+export const  HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg pt-16 mt-8">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg pt-16 mt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0300-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-pulse"></div>
@@ -18,10 +17,6 @@ export const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-2">
             <div className="space-y-4">
-              {/* <Badge className="cyber-glow bg-primary/20 text-primary border-primary/30 px-4 py-2">
-                <Brain className="w-4 h-4 mr-2" />
-                Next-Gen AI Solutions
-              </Badge> */}
               
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="matrix-text bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">

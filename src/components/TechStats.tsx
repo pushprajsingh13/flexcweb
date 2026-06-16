@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { TrendingUp, Users, Clock, Award } from "lucide-react";
 import aeroEngg from "../assets/aero.jpg";
 import evMan from "../assets/evBike.jpeg";

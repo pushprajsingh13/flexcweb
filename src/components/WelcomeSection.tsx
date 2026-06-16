@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { Animated } from "react-animated-css";
 import { appConfig } from "@/utils/app-config";
