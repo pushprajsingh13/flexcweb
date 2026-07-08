@@ -28,7 +28,7 @@ export const ServiceDetailsModal = ({ isOpen, onClose, service }: ServiceDetails
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-7xl bg-background/95 backdrop-blur-sm">
+      <DialogContent className="max-w-7xl bg-background/95 backdrop-blur-sm p-10">
         <DialogHeader>
           <Badge variant="outline" className="mb-2 w-fit">
             {service.category}
@@ -61,9 +61,7 @@ export const ServiceDetailsModal = ({ isOpen, onClose, service }: ServiceDetails
             </div>
           ))}
         </div>
-        <DialogFooter>
-          <Button onClick={onClose} variant="outline">Close</Button>
-        </DialogFooter>
+
       </DialogContent>
     </Dialog>
   );
